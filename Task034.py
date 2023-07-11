@@ -14,3 +14,29 @@
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да    
 # **Вывод:** Парам пам-пам
 
+
+def count_a(poem, alphabet):
+    counts = []
+    for i in range(len(poem)):
+        count = 0
+        for j in range(len(poem[i])):
+            if poem[i][j] in alphabet:
+                count += 1
+        counts.append(count)
+    return counts
+
+def true_false(counts):
+    counts = set(counts)
+    if len(counts) == 1:
+        print('Парам пам-пам :)')
+    else:
+        print('Пам парам :(')
+
+def task()  :
+    alphabet = 'аеёиоуыэюя'
+    poem = str(input('Введите стихотворение:>\n'))
+    poem = poem.split()
+    counts = count_a(poem, alphabet)
+    true_false(counts)
+
+task()
