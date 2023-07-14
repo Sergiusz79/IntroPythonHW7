@@ -19,7 +19,7 @@
 def count_a(poem, alphabet):
     counts = []
     for i in range(len(poem)):
-        counts.append(len(list(filter(lambda x: x in alphabet, poem[i])))) # добавляем в конец списка к-во согласных букв во фразе
+        counts.append(len(list(filter(lambda x: x in alphabet, poem[i])))) # добавляем в конец списка к-во гласных букв во фразе
     return counts
 
 def true_false(counts):
