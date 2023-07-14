@@ -19,11 +19,11 @@
 def count_a(poem, alphabet):
     counts = []
     for i in range(len(poem)):
-        counts.append(len(list(filter(lambda x: x in alphabet, poem[i]))))
+        counts.append(len(list(filter(lambda x: x in alphabet, poem[i])))) # добавляем в конец списка к-во согласных букв во фразе
     return counts
 
 def true_false(counts):
-    counts = set(counts)
+    counts = set(counts) 
     if len(counts) == 1:
         print('Парам пам-пам :)')
     else:
