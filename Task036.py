@@ -19,12 +19,12 @@
 # 6 12 18 24 30 36
 
 
-def print_operation_table (operation, num_rows=6, num_columns=6):
-    for i in range (1, num_rows + 1):
-         table  = []
-         for j in range (1, num_columns + 1):
-             table.append(str(operation(i, j)))
-         print(''.join(f'{a:<4}' for a in table))
+def print_operation_table (operation, num_rows = 6, num_columns = 6):
+    for i in range (1, num_rows + 1): 
+        operation_table = [] # каждый раз печатает новую строку не повторяя предыдущую
+        for j in range (1, num_columns + 1):
+            operation_table.append(str(operation(i, j))) # пока j в пределах range (1, num_columns + 1) добавляет в конец списка результат функции operation(i, j) в виде строки
+        print(''.join(f'{a:<4}' for a in operation_table)) # конвертирует список в строку где каждый элемент занимает 4 позиции слева {a:<4} пока переменная а в списке operation_table (для красоты)
  
 print_operation_table (lambda x, y: x * y)
 
